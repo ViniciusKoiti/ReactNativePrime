@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, TextInput, Button } from 'react-native';
-import PrimeNumberService from '../services/primeNumber.service';
+import PrimeNumberController from '../controller/primeNumber.controller.js';
 
 const PageCheckPrime = () => {
     const [number, onChangeNumber] = useState('');
     const [primo, setPrimo]= useState(false);
     
     function getPrimo(){
-       return PrimeNumberService.isPrimeNumber(number);
+        return PrimeNumberController.isPrimeNumber(number);
     };
     
     return (
